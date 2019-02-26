@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang=”en”>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Name of your awesome camera app -->
+    <title>Camera App</title>
+    <!-- Link to your main style sheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Camera -->
+    <main id="camera">
+        
+        <!-- Toric grid/axis top -->
+        <img id="grid" src="toricGrid.png" style="width:200px;">
+        <!-- Toric grid/axis btm -->
+        <img id="grid2" src="toricGrid.png" style="width:200px;">
+        
+        <!-- original axis top -->
+        <img src="gridax3line.png" alt="" id="axis" >
+        <!-- original axis btm -->
+        <img src="gridax3line.png" alt="" id="axis2" >
+        
+        <!-- Camera sensor -->
+        <canvas id="camera--sensor"></canvas>
+        
+        <!-- Camera view top -->
+        <video id="camera--view" autoplay playsinline></video>
+        <!-- Camera view btm -->
+        <video id="camera--view2" autoplay playsinline></video>
+        
+        <!-- Camera output -->
+        <img src="//:0" alt="" id="camera--output">
+        <!-- Camera trigger ...hidden because no capture function needed...
+        <button id="camera--trigger">Take a picture</button>
+        -->
+        <!-- Zoom trigger (digital via scale) -->
+        <button id="camera--zoom" onclick="double()">3x</button>
+        <!-- Axis input -->
+        <input id="axisInput" type="number" placeholder="Axis"></input>
+    </main>
+    
+
+    <!-- Reference to your JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
